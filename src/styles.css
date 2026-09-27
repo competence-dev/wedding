@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+section[id] { scroll-margin-top: 100px; }
+:focus-visible { outline: 2px solid #bd9852; outline-offset: 4px; }
+@media (max-width: 640px) { h2 { overflow-wrap: anywhere; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+
+/* Let the opened invitation determine its height on phones and tablets.
+   Absolute positioning inside a landscape envelope otherwise overlays nearby text. */
+@media (max-width: 1023px) {
+  .invitation-scene { min-height: calc(100svh - 5rem); padding: 2rem 1rem 3rem; }
+  .invitation-controls { flex-wrap: wrap; gap: .75rem; }
+  .invitation-controls button { min-height: 44px; }
+  .invitation-scene[data-open="true"] .envelope-stage { aspect-ratio: auto; max-height: none; padding: 1rem 0; }
+  .invitation-scene[data-open="true"] .envelope-body { position: absolute; inset: 0; }
+  .invitation-scene[data-open="true"] .invitation-card { position: relative; transform: none; width: 100%; padding: 2rem 1.5rem; }
+  .invitation-card h2 { font-size: clamp(1.75rem, 7.5vw, 2.5rem); line-height: 1.2; }
+}
+@media (max-width: 639px) {
+  .site-header-row { padding-inline: 1rem; gap: .5rem; }
+  .site-brand { gap: .5rem; min-width: 0; }
+  .site-brand > div { min-width: 0; }
+  .site-brand .text-label-lg { font-size: .75rem; letter-spacing: .08em; }
+  .site-brand img { flex-shrink: 0; }
+  .site-header-actions { gap: .25rem; flex-shrink: 0; }
+  .site-header-actions button { width: 44px; height: 44px; flex-shrink: 0; }
+  .wedding-date { width: 100%; flex-wrap: wrap; justify-content: center; gap: .75rem; padding: 1rem; }
+  .wedding-date > .text-headline-md { flex-basis: 100%; order: -1; }
+  .wedding-date > .rounded-full { display: none; }
+  .wedding-countdown { padding: 1rem .5rem; }
+  .wedding-countdown > .grid { gap: .375rem; }
+  .wedding-countdown > .grid > div { min-width: 0; padding: .75rem .125rem; }
+  .wedding-countdown .text-headline-lg { font-size: clamp(1.25rem, 6vw, 2rem); line-height: 1.25; }
+  .wedding-countdown .text-label-sm { letter-spacing: .03em; }
+  .transport-card { padding: 1.5rem; gap: 1rem; flex-direction: column; }
+  main h1 { font-size: clamp(2.25rem, 10vw, 3.5rem); line-height: 1.15; }
+}
