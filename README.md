@@ -23,7 +23,7 @@ Upload **all contents of `dist/`** to any static website host. No backend, datab
 
 ## RSVP
 
-The form prepares a Russian message with the guest's name, attendance, guest count, overnight stay, evening transfer, drinks, and wishes. It opens `https://t.me/u_amaliya?text=…`. Guests must press Send in Telegram themselves. The site never reports delivery; it shows a copyable message as a fallback. Declined responses omit guest count, transfer, and drinks. No responses are stored by this site.
+The form prepares a Russian message with the guest's name, attendance, overnight stay, evening transfer, drinks, and wishes. It opens `https://t.me/u_amaliya?text=…`. Guests must press Send in Telegram themselves. The site never reports delivery; it shows a copyable message as a fallback. Declined responses omit overnight stay, transfer, and drinks. No responses are stored by this site.
 
 ## Edit content
 

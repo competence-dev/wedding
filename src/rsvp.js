@@ -5,7 +5,7 @@ export function buildRsvpMessage(data) {
     'Ответ на приглашение — Руслан и Амалия, 24 октября 2026',
     `Имя: ${data.name.trim()}`,
     `Присутствие: ${attending ? 'С радостью приду!' : 'К сожалению, не смогу'}`,
-    ...(attending ? [`Количество гостей: ${data.guests}`, `Ночёвка: ${data.overnight === 'yes' ? 'Останемся на ночь' : 'Уедем вечером'}`, `Вечерний трансфер: ${data.transfer === 'yes' ? 'Нужен' : 'Не нужен'}`, `Напитки: ${data.drinks.map(d => drinkNames[d]).join(', ') || 'Не указаны'}`] : []),
+    ...(attending ? [`Ночёвка: ${data.overnight === 'yes' ? 'Останемся на ночь' : 'Уедем вечером'}`, `Вечерний трансфер: ${data.transfer === 'yes' ? 'Нужен' : 'Не нужен'}`, `Напитки: ${data.drinks.map(d => drinkNames[d]).join(', ') || 'Не указаны'}`] : []),
     ...(data.wishes.trim() ? [`Пожелания / музыка: ${data.wishes.trim()}`] : []),
   ].join('\n');
 }

@@ -402,7 +402,6 @@ import { buildRsvpMessage, telegramRsvpUrl } from "./rsvp.js";
       const [formData, setFormData] = useState({
         name: "",
         attendance: "attending",
-        guests: "2",
         transfer: "yes",
         overnight: "",
         drinks: ["wine"],
@@ -873,25 +872,8 @@ import { buildRsvpMessage, telegramRsvpUrl } from "./rsvp.js";
                     </div>
                   </div>
 
-                  {/* Guest Count & Transfer */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="flex flex-col space-y-2">
-                      <label className="font-label-sm text-label-sm uppercase tracking-wider text-primary" htmlFor="guest-count">
-                        Количество гостей
-                      </label>
-                      <select
-                        className="w-full py-3 px-4 bg-surface-container-low rounded-sm font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors"
-                        id="guest-count"
-                        value={formData.guests}
-                        onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                      >
-                        <option value="1">1 персона (Я)</option>
-                        <option value="2">2 персоны</option>
-                        <option value="3">3 персоны</option>
-                        <option value="4">4 персоны (Семейная пара с детьми)</option>
-                      </select>
-                    </div>
-
+                  {/* Transfer */}
+                  <div>
                     <div className="flex flex-col space-y-2">
                       <label className="font-label-sm text-label-sm uppercase tracking-wider text-primary" htmlFor="transfer-need">
                         Трансфер из Лотоса в Ташкент (только вечерний отъезд)
