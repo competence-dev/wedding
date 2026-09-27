@@ -1052,7 +1052,7 @@ import { buildRsvpMessage, telegramRsvpUrl } from "./rsvp.js";
       const audioRef = useRef(null);
 
       const toggleMusic = () => {
-        if (!audioRef.current) audioRef.current = new Audio(import.meta.env.VITE_MUSIC_URL || './ambience.wav');
+        if (!audioRef.current) audioRef.current = new Audio(import.meta.env.VITE_MUSIC_URL || './audio/a-thousand-years.mp3');
         const audio = audioRef.current;
         audio.loop = true;
         audio.volume = 0.25;

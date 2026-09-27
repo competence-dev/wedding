@@ -31,7 +31,7 @@ The form prepares a Russian message with the guest's name, attendance, overnight
 - RSVP recipient and message format: `src/rsvp.js`.
 - Colors and typography: `tailwind.config.cjs`.
 - General styles: `src/styles.css`.
-- Photos and original synthesized ambience: `public/`.
+- Photos and supplied background music: `public/`. The default track is “A Thousand Years” by Christina Perri (`public/audio/a-thousand-years.mp3`), played only after the guest enables music.
 - To use your own licensed music, copy `.env.example` to `.env.local` and set `VITE_MUSIC_URL`, then rebuild.
 
 Google Fonts requires an internet connection; serif fallback fonts are provided. Supplied reference images are bundled locally. The map button searches the venue described in the supplied design; confirm the venue pin and event details before sharing with guests.
